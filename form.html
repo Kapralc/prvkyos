@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>Přihláška – NordicTrip Finsko</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="img/203051.ico">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="img/apple-touch-icon-removebg-preview.png" alt="Logo NordicTrip">
+      <span>NordicTrip</span>
+    </div>
+    <ul>
+      <li><a href="index.html">Domů</a></li>
+      <li><a href="form.html" class="active">Přihláška</a></li>
+      <li><a href="bootstrap.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Přihláška na zájezd do Finska</h1>
+
+  <section>
+    <p style="text-align:center;">
+      Vyplňte prosím tento krátký formulář a my se vám ozveme s podrobnostmi o cestě.<br>
+      Zažijte s námi dobrodružství mezi jezery, lesy a polární září!
+    </p>
+
+    <form id="formular" onsubmit="return odeslatFormular()">
+      <label for="jmeno">Jméno a příjmení:</label>
+      <input type="text" id="jmeno" required placeholder="např. Jan Novák">
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" required placeholder="např. jan@email.cz">
+
+      <label for="telefon">Telefon:</label>
+      <input type="tel" id="telefon" required placeholder="+420 777 888 999">
+
+      <label for="termin">Preferovaný termín zájezdu:</label>
+      <select id="termin" required>
+        <option value="">-- Vyberte termín --</option>
+        <option>Jarní výlet (květen 2025)</option>
+        <option>Letní dobrodružství (červenec 2025)</option>
+        <option>Zimní polární záře (leden 2026)</option>
+      </select>
+
+      <label for="misto">Preferované místo:</label>
+      <select id="misto">
+        <option value="">-- Vyberte --</option>
+        <option>Helsinki</option>
+        <option>Rovaniemi</option>
+        <option>Turku</option>
+        <option>Laponsko</option>
+      </select>
+
+      <label for="poznamka">Poznámka:</label>
+      <textarea id="poznamka" rows="4" placeholder="Např. chci pokoj s výhledem na jezero..."></textarea>
+
+      <button type="submit">Odeslat přihlášku</button>
+    </form>
+
+    <div id="potvrzeni" style="display:none; text-align:center; margin-top:25px; font-weight:bold; color:#0033cc;">
+       Děkujeme! Vaše přihláška byla úspěšně odeslána.
+    </div>
+  </section>
+
+  <section style="margin-top:50px;">
+    <h2>Co vás ve Finsku čeká?</h2>
+    <ul>
+      <li>Saunování u zamrzlého jezera</li>
+      <li>Setkání s pravým Santa Clausem</li>
+      <li>Plavba mezi tisíci ostrovy v Turku</li>
+      <li>Polární záře nad Laponskem</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 NordicTrip – Cestování po Finsku</p>
+</footer>
+
+<script>
+function odeslatFormular() {
+  const jmeno = document.getElementById('jmeno').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  if (jmeno === "" || email === "") {
+    alert("Vyplňte prosím všechna povinná pole.");
+    return false;
+  }
+
+  document.getElementById('formular').style.display = 'none';
+  document.getElementById('potvrzeni').style.display = 'block';
+  return false; // zamezí skutečnému odeslání formuláře
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="UTF-8">
+  <title>NordicTrip – Objev Finsko s námi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="img/203051.ico">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="img/apple-touch-icon-removebg-preview.png" alt="Logo NordicTrip">
+      <span>NordicTrip</span>
+    </div>
+    <ul>
+      <li><a href="index.html" class="active">Domů</a></li>
+      <li><a href="form.html">Přihláška</a></li>
+      <li><a href="bootstrap.html">Galerie</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <h1>Objevte krásy Finska</h1>
+
+  <section>
+    <h2>Proč Finsko?</h2>
+    <p>
+      Finsko je zemí tisíců jezer, nekonečných lesů a fascinující kultury severu. 
+      Od kouzelné polární záře po moderní Helsinky – každý si zde najde kousek přírody i pohody.
+    </p>
+  </section>
+
+  <h2>Top 3 města k návštěvě</h2>
+  <table id="mestaTabulka">
+    <tr><th>Město</th><th>Zajímavost</th></tr>
+    <tr><td>Helsinki</td><td>Moderní architektura a přístavní atmosféra.</td></tr>
+    <tr><td>Rovaniemi</td><td>Domov Santa Clause a polární záře.</td></tr>
+    <tr><td>Turku</td><td>Historické město a brána do souostroví.</td></tr>
+  </table>
+
+  <div style="text-align:center; margin-top:20px;">
+    <button id="pridatMesto" class="btn">Přidat město</button>
+  </div>
+
+  <h2>Fotografie z cest</h2>
+  <div class="gallery">
+    <img src="img/katedrala-helsinky.jpg" alt="Helsinki" class="fade">
+    <img src="img/aurora-borealis-rovaniemi.jpg" alt="Rovaniemi v zimě" class="fade">
+  </div>
+
+  <section class="motivace">
+    <h2>Motivace z Finska</h2>
+    <p id="finskyText">
+      „Štěstí nenajdeš v cíli, ale na cestě.“ – Finské přísloví
+    </p>
+    <button id="zmenBtn">Změnit citát</button>
+  </section>
+
+  <h2>Krátká video ukázka</h2>
+<video class="finland-video" controls>
+  <source src="video/Welcome to Finland.mp4" type="video/mp4">
+  Váš prohlížeč nepodporuje video.
+</video>
+
+  <div id="scrollPosition">Scroll Y: 0</div>
+</main>
+
+<footer>
+  <p>&copy; 2025 NordicTrip – Objev Finsko s námi</p>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
